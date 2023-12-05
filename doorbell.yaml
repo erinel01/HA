@@ -86,7 +86,7 @@ action:
     ', replace='_', ignorecase=False) }}
   data:
     title: Dörrklocka
-    message: 'Det ringde på Höjden vid "%H:%M"'
+    message: 'Det ringde på Höjden vid '"%H:%M"
     data:
       image: /local/{{store_location}}/{{ trigger.to_state.last_changed | as_timestamp
         | timestamp_custom("%Y-%m-%d_%H-%M-%S") }}.jpg
