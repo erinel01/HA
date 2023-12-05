@@ -85,7 +85,7 @@ action:
 - service: notify.mobile_app_{{ device_attr(notify_device, 'name').lower() |regex_replace(find='
     ', replace='_', ignorecase=False) }}
   data:
-    title: Dörrklocka
+    title: Doorbell
     message: 'Det ringde på Höjden vid '{{ timestamp_custom("%Y-%m-%d_%H:%M") }}
     data:
       image: /local/{{store_location}}/{{ trigger.to_state.last_changed | as_timestamp
